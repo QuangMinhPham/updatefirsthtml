@@ -1,0 +1,40 @@
+<style>
+.block{
+    width:100px;
+    height: 100px;
+    margin:10px;
+    padding:10px;
+    border:2px dotted black;
+}
+.dragbox{
+    display:inline-flex;
+}
+</style>
+<p ondragstart="dragStart(event)" draggable="true" id="dragtarget1">Drag this!</p>
+<p ondragstart="dragStart(event)" draggable="true" id="dragtarget2">Drag that!</p>
+
+<div class="dragbox">
+    
+    <div class="block" ondrop="drop(event)" ondragover="allowDrop(event)">
+        
+    </div>
+    <div class="block" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="block" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="block" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+
+<script>
+    function dragStart(event){
+        event.dataTransfer.setData("Text",event.target.id);
+    }
+    function allowDrop(event)
+    {
+        event.preventDefault();
+    }
+    function drop(event)
+    {
+        event.preventDefault();
+        let data=event.dataTransfer.getData("Text");
+        event.target.appendChild(document.getElementById(data));
+    }
+</script>

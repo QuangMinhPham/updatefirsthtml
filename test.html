@@ -1,0 +1,285 @@
+<style>
+    form{
+       border:2px solid;
+       background-color: rgb(241, 225, 203);
+       text-align: center;
+       margin:50px 200px;
+       padding:20px 20px;
+       border-radius: 20px;
+    }
+</style>
+
+<form action="/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password">
+
+    <label for="subscribe">Subscribe to newsletter:</label>
+    <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+
+    <button type="submit">Submit</button>
+</form>
+<h1>sadas</h1>
+    <div>TÀI LIỆU HƯỚNG DẪN HỌC HTML</div>
+    <div>TÀI LIỆU HƯỚNG DẪN HỌC HTML</div>
+    <dialog open>CHÀO MỪNG CÁC BẠN THAM GIA KHÓA HỌC</dialog>
+    <div>Tài liệu hướng dẫn học CSS từ cơ bản đến nâng cao</div>
+    <div>Tài liệu hướng dẫn học CSS từ cơ bản đến nâng cao</div>
+    <div>Tài liệu hướng dẫn học CSS từ cơ bản đến nâng cao</div>
+    <div>Tài liệu hướng dẫn học CSS từ cơ bản đến nâng cao</div>
+    <div>Tài liệu hướng dẫn học CSS từ cơ bản đến nâng cao</div>
+    <div>Tài liệu hướng dẫn học CSS từ cơ bản đến nâng cao</div>
+
+    <div>TÀI LIỆU HƯỚNG DẪN HỌC HTML</div>
+    <div>TÀI LIỆU HƯỚNG DẪN HỌC HTML</div>
+    <dialog id="hopthoai">CHÀO MỪNG CÁC BẠN THAM GIA KHÓA HỌC</dialog>
+    <div>Tài liệu hướng dẫn học CSS từ cơ bản đến nâng cao</div>
+    <div>Tài liệu hướng dẫn học CSS từ cơ bản đến nâng cao</div>
+    <div>Tài liệu hướng dẫn học CSS từ cơ bản đến nâng cao</div>
+    <div>Tài liệu hướng dẫn học CSS từ cơ bản đến nâng cao</div>
+    <div>Tài liệu hướng dẫn học CSS từ cơ bản đến nâng cao</div>
+    <div>Tài liệu hướng dẫn học CSS từ cơ bản đến nâng cao</div>
+    <button type="button" onclick="myFunction()">BẤM VÀO ĐÂY</button>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("hopthoai");
+            if(x.open == true){
+                x.open = false;
+            }else{
+                x.open = true;
+            }
+        }
+    </script>
+    
+
+<p></p>
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        nav{
+            background-color:#47bdec;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            margin:10px 500px;
+            border:2px solid black;
+        }
+        a{ 
+            border:2px solid black;
+            padding:10px;
+            font-size:20px;
+            color:white;
+            text-decoration:none;
+        }
+        a:hover{
+            background-color:#333;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="http://webcoban.vn/html/default.html">HTML</a>
+        <a href="http://webcoban.vn/css/default.html">CSS</a>
+        <a href="http://webcoban.vn/javascript/default.html">JavaScript</a>
+        <a href="http://webcoban.vn/mysql/default.html">MySQL</a>
+        <a href="http://webcoban.vn/php/default.html">PHP</a>
+    </nav>
+    <video controls loop autoplay poster="https://img.freepik.com/vecteurs-libre/tableau-elements-mathematiques_1411-88.jpg">
+         <source src="sel.mp4">
+    </video>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable List with Redirect</title>
+    <script>
+        function redirectTo(url) {
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <h2>Danh sách các chủ đề:</h2>
+
+    <details >
+        <summary>Môn học</summary>
+        <ul>
+            <li onclick=" window.location.href ='index.html'">Toán học</li>
+            <li>Vật lý</li>
+            <li>Hóa học</li>
+            <li>Sinh học</li>
+        </ul>
+    </details>
+
+    <details onclick="redirectTo('https://example.com/languages')">
+        <summary>Các ngôn ngữ</summary>
+        <ul>
+            <li>Tiếng Anh</li>
+            <li>Tiếng Pháp</li>
+            <li>Tiếng Đức</li>
+            <li>Tiếng Nhật</li>
+        </ul>
+    </details>
+
+    <details onclick="redirectTo('https://example.com/outdoor')">
+        <summary>Hoạt động ngoài trời</summary>
+        <ul>
+            <li>Đi bộ đường dài</li>
+            <li>Đạp xe</li>
+            <li>Chạy bộ</li>
+            <li>Cắm trại</li>
+        </ul>
+    </details>
+    <img src="a" usemap="#mat-mui-mieng">
+    <map name="mat-mui-mieng">
+    <area shape="circle" coords="149,203,30" href="demo?file=2258">
+    <area shape="circle" coords="250,203,30" href="demo?file=2259">
+    <area shape="rect" coords="169,245,228,286" href="demo?file=2260">
+    <area shape="rect" coords="162,292,237,336" href="demo?file=2261">
+    
+</map>
+</body>
+
+<!DOCTYPE html>
+<html>
+<body>
+    <table border="1">
+        <thead valign="top">
+            <tr style="height: 60px;">
+                <th>Họ và tên</th>
+                <th>Năm sinh</th>
+                <th>Giới tính</th>
+                <th>Quê quán</th>
+                <th>noneeeeeeeeeeeeee</th>
+            </tr>
+        </thead>
+        <tbody valign="bottom">
+            <tr style="height:80px">
+                <td>Nguyễn Thành A</td>
+                <td>1993</td>
+                <td>Nam</td>
+                <td>Cần Thơ</td>
+            </tr>
+            <tr style="height:80px">
+                <td>Trần Văn B</td>
+                <td>1985</td>
+                <td>Nam</td>
+                <td>Vĩnh Long</td>
+            </tr>
+            <tr style="height:80px">
+                <td>Lê Thị C</td>
+                <td>1990</td>
+                <td>Nữ</td>
+                <td>Sóc Trăng</td>
+            </tr>
+            <tr style="height:80px">
+                <td>Mai Phước D</td>
+                <td>1992</td>
+                <td>Nam</td>
+                <td>Hậu Giang</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr style="height: 100px;">
+            <td></td>
+            <td colspan="4" align="end" valign="center">Mọi chi tiết vui lòng liên hệ cố vấn học tập</td>
+            </tr>
+        </tfoot>
+    </table>
+
+<head>
+<style>
+  /* Style for the div area */
+  #myDiv {
+    background: yellow;
+    border: 1px solid black;
+    padding: 10px;
+    width: 300px;
+    height: 150px;
+  }
+
+  /* Style for the context menu */
+  #contextMenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    width: 200px;
+    z-index: 1000;
+  }
+
+  #contextMenu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #contextMenu ul li {
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  #contextMenu ul li:hover {
+    background-color: #ddd;
+  }
+</style>
+</head>
+<body>
+
+<div id="myDiv">
+  Right-click inside this box to see the context menu!
+</div>
+
+<div id="contextMenu">
+  <ul>
+    <li onclick="refreshPage()">Refresh</li>
+    <li onclick="shareOnTwitter()">Share on Twitter</li>
+    <li onclick="shareOnFacebook()">Share on Facebook</li>
+    <li onclick="emailPage()">Email This Page</li>
+  </ul>
+</div>
+
+<script>
+  // JavaScript to handle the right-click and show context menu
+  const myDiv = document.getElementById('myDiv');
+  const contextMenu = document.getElementById('contextMenu');
+
+  // Function to display the context menu
+  myDiv.addEventListener('contextmenu', function(event) {
+    event.preventDefault(); // Prevent the default context menu from appearing
+
+    contextMenu.style.top = `${event.pageY}px`;
+    contextMenu.style.left = `${event.pageX}px`;
+    contextMenu.style.display = 'block';
+  });
+
+  // Hide context menu when clicking outside
+  document.addEventListener('click', function() {
+    contextMenu.style.display = 'none';
+  });
+
+  // Functions for menu items
+  function refreshPage() {
+    window.location.reload();
+  }
+
+  function shareOnTwitter() {
+    window.open('//twitter.com/intent/tweet?text=' + window.location.href);
+  }
+
+  function shareOnFacebook() {
+    window.open('//facebook.com/sharer/sharer.php?u=' + window.location.href);
+  }
+
+  function emailPage() {
+    window.location.href = 'mailto:?body=' + window.location.href;
+  }
+</script>
+
+</body>
+</html>

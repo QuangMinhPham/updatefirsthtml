@@ -1,0 +1,143 @@
+<!doctype html>
+<htlm>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <title>PMinh</title> 
+        <meta charset="UTF-8">
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript,lập trình">
+        <meta name="author" content="Pham-Minh">
+        <meta http-equiv="refresh" content="120">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="node-list">
+            <div class="item">Bài viết</div>
+            <div class="item">Thông tin</div>
+            <div class="item">Bạn bè</div>
+            <div class="item">Ảnh</div>
+            <div class="item">Video</div>
+        </div>
+        <div class="p1">
+                <h1 class="hello">Hello World</h1>
+                <p>I am Minh!</p>
+                <p class="intro">This is a picture about me</p>
+            <div>
+                <image class="minh" src="images/avatar.jpg" alt="Minh's picture" width="50%">
+                <p>Minh is so handsome, right?</p>
+            </div>
+        </div>
+        <hr>
+            <input type="datetime">
+            <input type="checkbox">
+            <input type="month">
+            <input type="image">
+            <input type="datetime-local">
+            <input type="radio">
+            <input type="color">
+            <input type="range">
+            <input type="number">
+            <input type="date">
+            <input type="reset">
+            <input type="time">
+            <input type="submit">
+        <hr>
+            <input class="acnt-name" type="text" placeholder="Enter your username" >
+            <input class="password" type="password" placeholder="Enter your password">
+            <button class="signup" onclick="window.location.href='signup.html'">Sign in</button>
+            <a class="more" href="more.html">Sign up your information.</a>
+            <input type="file">
+            
+        <ol>
+            <div class="school">
+                <div class="school-name">
+                    <li>Nguyễn Viết Xuân</li>
+                    <image class="school-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzA-IthqvcsYU2ZYEuX44XmLs3IcJ4Rue1aA&s">
+                </div>        
+                <div class="school-name">
+                    <li>Lương Thế Vinh</li>
+                    <image class="school-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShNTh4F6QTPc1DxrybC5ZS5K28cQR5Lisusw&s">
+                </div>
+                <div class="school-name">
+                    <li>Nguyễn Khuyến</li>
+                    <image class="school-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxWvgU56FjDHR9bSJof3uOQ0z3Mp_iiWmShQ&s"></image>
+                </div>
+                <div class="school-name">
+                    <li>UET</li>
+                    <image class="school-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM02RGuy1VWlquvtTZRGJ1UP3Jo9KP2RCeDQ&s"></image>
+                </div>
+            </div>
+        </ol>
+        <ul>
+            <li>A dot</li>
+        </ul>
+        <p>Click on this underlined <u><span id="clickable-text">TEXT</span></u> to change its color to RED.</p>
+        <script>
+            document.getElementById('clickable-text').addEventListener('click', function() {
+                if(this.style.color!= 'red')
+            {
+                this.style.color='red';
+            }
+            else {
+                this.style.color='blue';
+            }
+           
+            });
+        </script>
+        <script>
+            function calculate() {
+                // Lấy giá trị từ các phần tử nhập liệu
+                var num1 = parseFloat(document.getElementById('num1').value);
+                var num2 = parseFloat(document.getElementById('num2').value);
+    
+                // Thực hiện phép tính
+                var sum = num1 * num2;
+    
+                // Hiển thị kết quả
+                document.getElementById('result').value = sum;
+            }
+        </script>
+        <form>
+            <label for="num1">Number 1:</label>
+            <input type="number" id="num1" name="num1">
+            <br>
+            <label for="num2">Number 2:</label>
+            <input type="number" id="num2" name="num2">
+            <br>
+            <button type="button" onclick="calculate()">Calculate</button>
+            <br>
+            <label for="result">Result:</label>
+            <output id="result" name="result"></output>
+        </form>
+        <style>
+            iframe{
+                display: block;
+                margin:0 auto;
+                border-radius:30px;
+                border:5px dotted rgb(0, 0, 0);
+            }
+            table, th, td {
+            border: 1px solid black;
+            }
+            hr{
+                border: 0;
+                height: 4px;
+                margin:25px;
+                background-color:black;
+            }
+        </style>
+        <hr>
+        <iframe src="signup.html" width="80%" height="500px"></iframe>
+        <hr>
+        <table>
+            <tr>
+                <th>minh</th>
+                <th>siu</th>
+            </tr>
+            <tr>
+                <td>minh</td>
+                <td>siu</td>
+            </tr>
+        </table>
+    </body>
+</htlm>

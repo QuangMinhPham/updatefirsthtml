@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="index.css"> -->
+        <title>test2-dragsmt</title>
+    <style>
+        .transports{
+            text-align: center;
+            background-image:url(images/transport.png);
+            height:800px;
+            display:flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+        .box{
+            margin-left:  40px;
+            margin-right: 20px;
+            margin-top: 30px;
+            width: 230px;
+            min-height: 60px;
+            height: auto;
+            border:1px solid black;
+            display: flex; /* Thêm dòng này */
+            flex-direction: column;
+            justify-content: center; /* Thêm dòng này */
+            align-items: center;
+            /
+        }
+        .box1, .box2{
+            display:flex;
+            margin-bottom: 250px;
+        }
+        .options{
+            display: block;
+        }
+        .option{
+            margin:10px 50px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="options">
+            <div class="option1" style="display:flex">
+                <p id="1" ondragstart="dragStart(event)" draggable="true" class="option" style="padding:10px 30px;border:1px solid black;background:rgba(251, 40, 40, 0.864);">bike</p>
+                <p id="2" ondragstart="dragStart(event)" draggable="true" class="option" style="padding:10px 30px;border:1px solid black;background:rgb(0, 157, 255);">plane</p>
+                <p id="3" ondragstart="dragStart(event)" draggable="true" class="option" style="padding:10px 30px;border:1px solid black;background:rgb(149, 227, 76);">ship</p>
+                <p id="4" ondragstart="dragStart(event)" draggable="true" class="option" style="padding:10px 30px;border:1px solid black;background:rgb(0, 229, 255);">bus</p>
+                <p id="5" ondragstart="dragStart(event)" draggable="true" class="option" style="padding:10px 30px;border:1px solid black;background:rgb(239, 131, 218);">car</p>
+            </div>
+            <div class="option1" style="display:flex">
+                <p id="6" ondragstart="dragStart(event)" draggable="true" class="option" style="padding:10px 30px;border:1px solid black;background:rgb(249, 231, 76);">scooter</p>
+                <p id="7" ondragstart="dragStart(event)" draggable="true" class="option" style="padding:10px 30px;border:1px solid black;background:rgb(0, 255, 42);">train</p>
+                <p id="8" ondragstart="dragStart(event)" draggable="true" class="option" style="padding:10px 30px;border:1px solid black;background:rgb(248, 61, 77);">boat</p>
+                <p id="9" ondragstart="dragStart(event)" draggable="true" class="option" style="padding:10px 30px;border:1px solid black;background:rgb(0, 247, 255);">motorcycle</p>
+                <p id="10" ondragstart="dragStart(event)" draggable="true" class="option" style="padding:10px 30px;border:1px solid black;background:rgb(0, 255, 200);">lorry</p>
+            </div>
+        </div>
+        <!-- <img id="2" ondragstart="dragStart(event)" draggable="true" src="images/avatar.jpg" width="100px"> -->
+        <div class="transports">
+            <div class="box1">
+                <div class="box" ondrop="drop(event)" ondragover="allowdrop(event)"></div>
+                <div class="box" ondrop="drop(event)" ondragover="allowdrop(event)"></div>
+                <div class="box" ondrop="drop(event)" ondragover="allowdrop(event)"></div>
+                <div class="box" ondrop="drop(event)" ondragover="allowdrop(event)"></div>
+                <div class="box" ondrop="drop(event)" ondragover="allowdrop(event)"></div> 
+            </div>
+            <div class="box2">
+                <div class="box" ondrop="drop(event)" ondragover="allowdrop(event)"></div>
+                <div class="box" ondrop="drop(event)" ondragover="allowdrop(event)"></div>
+                <div class="box" ondrop="drop(event)" ondragover="allowdrop(event)"></div>
+                <div class="box" ondrop="drop(event)" ondragover="allowdrop(event)"></div>
+                <div class="box" ondrop="drop(event)" ondragover="allowdrop(event)"></div> 
+            </div>
+        </div>    
+    </body>
+    <script>
+        function dragStart(event){
+            event.dataTransfer.setData("Text",event.target.id);
+        }
+        function allowdrop(event){
+            event.preventDefault();
+        }
+        function drop(event){
+            event.preventDefault();
+            let data=event.dataTransfer.getData("Text");
+            console.log(event.target.id);
+            if(event.target.id==""){
+            event.target.appendChild(document.getElementById(data));
+            }
+        }
+    </script>
+</html>
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML Geolocation</h1>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+</body>
+</html>
+
